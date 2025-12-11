@@ -1,4 +1,4 @@
-# [OmniVLA: An Omni-Modal Vision-Language-Action Model for Robot Navigation](https://github.com/NHirose/OmniVLA)
+# [OmniVLA](https://github.com/NHirose/OmniVLA): An Omni-Modal Vision-Language-Action Model for Robot Navigation
 
 ## Docker Support
 - We provide a Makefile to simplify the environment setup.
