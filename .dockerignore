@@ -3,25 +3,36 @@
 .gitignore
 .dockerignore
 
-# --- Large Model Checkpoints ---
-# 重要: これらをCOPYしてしまうとイメージサイズが数十GBになります
-# 実行時はマウント(-v)で参照するため、ビルド時には除外します
+# --- Large Model Checkpoints (CRITICAL) ---
+# コンテキスト転送時間を短縮し、イメージサイズ爆発を防ぐ
 **/omnivla-original*
+**/omnivla-original-balance*
 **/omnivla-finetuned-cast*
 **/OmniVLA_internal/MBRA*
 **/openvla*
 
 # --- External Repositories ---
-# これらもマウントするため、COPY対象から外します
 Learning-to-Drive-Anywhere-with-MBRA
 lerobot
 
-# --- Python Cache & Environment ---
+# --- Symlinks (Local only) ---
+# ホスト側で作ったシンボリックリンク自体もコピーしない方が安全
+**/OmniVLA/MBRA
+
+# --- Python Cache & Build Artifacts ---
 **/__pycache__
 **/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.egg-info
 .env
 venv
 env
+build
+dist
+
+# --- Jupyter / Notebooks ---
+.ipynb_checkpoints
 
 # --- Logs & Outputs ---
 wandb
@@ -32,3 +43,4 @@ logs
 # --- IDE Settings ---
 .vscode
 .idea
+*.swp

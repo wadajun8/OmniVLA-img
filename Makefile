@@ -16,7 +16,7 @@ CONTAINER_NAME=omnivla_container
 setup:
 	@echo "Downloading model checkpoints..."
 	# Clone into the specific directory
-	git clone git@github.com:wadajun8/OmniVLA.git || true
+	git clone https://github.com/NHirose/OmniVLA.git || true
 	cd OmniVLA && git clone https://huggingface.co/NHirose/omnivla-original || true
 	cd OmniVLA && git clone https://huggingface.co/NHirose/omnivla-original-balance || true
 	cd OmniVLA && git clone https://huggingface.co/NHirose/omnivla-finetuned-cast || true

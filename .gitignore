@@ -9,20 +9,22 @@ venv/
 .env
 .DS_Store
 
+# --- Build & Install Metadata ---
+# pip install -e . で生成されるフォルダ
+*.egg-info/
+build/
+dist/
+
 # --- IDE ---
 .vscode/
 .idea/
+*.swp
 
-# --- Large Model Checkpoints (Huge files) ---
-# これらは "make setup" でダウンロードするためGit管理しません
-OmniVLA/omnivla-original/
-OmniVLA/omnivla-original-balance/
-OmniVLA/omnivla-finetuned-cast/
-OmniVLA/OmniVLA_internal/MBRA/
-OmniVLA/openvla/
+# --- Large Model Checkpoints ---
+OmniVLA/
+OmniVLA_internal/
 
 # --- External Repositories ---
-# "make setup-train" でクローンされる外部リポジトリ
 Learning-to-Drive-Anywhere-with-MBRA/
 lerobot/
 
@@ -32,6 +34,7 @@ checkpoints/
 outputs/
 logs/
 *.log
+*.csv
 
 # --- Datasets ---
 data/

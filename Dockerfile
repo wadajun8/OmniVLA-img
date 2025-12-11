@@ -41,7 +41,6 @@ RUN pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 \
 
 # 7. Install Flash Attention 2
 # Must be compiled against the EXACT PyTorch version installed above
-ENV MAX_JOBS=4
 RUN pip install packaging ninja psutil
 RUN pip install "flash-attn==2.5.5" --no-build-isolation
 
