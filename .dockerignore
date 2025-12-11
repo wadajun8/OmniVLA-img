@@ -1,0 +1,34 @@
+# --- Version Control ---
+.git
+.gitignore
+.dockerignore
+
+# --- Large Model Checkpoints ---
+# 重要: これらをCOPYしてしまうとイメージサイズが数十GBになります
+# 実行時はマウント(-v)で参照するため、ビルド時には除外します
+**/omnivla-original*
+**/omnivla-finetuned-cast*
+**/OmniVLA_internal/MBRA*
+**/openvla*
+
+# --- External Repositories ---
+# これらもマウントするため、COPY対象から外します
+Learning-to-Drive-Anywhere-with-MBRA
+lerobot
+
+# --- Python Cache & Environment ---
+**/__pycache__
+**/*.pyc
+.env
+venv
+env
+
+# --- Logs & Outputs ---
+wandb
+outputs
+logs
+*.log
+
+# --- IDE Settings ---
+.vscode
+.idea

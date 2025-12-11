@@ -1,0 +1,38 @@
+# --- Python & System ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.DS_Store
+
+# --- IDE ---
+.vscode/
+.idea/
+
+# --- Large Model Checkpoints (Huge files) ---
+# これらは "make setup" でダウンロードするためGit管理しません
+OmniVLA/omnivla-original/
+OmniVLA/omnivla-original-balance/
+OmniVLA/omnivla-finetuned-cast/
+OmniVLA/OmniVLA_internal/MBRA/
+OmniVLA/openvla/
+
+# --- External Repositories ---
+# "make setup-train" でクローンされる外部リポジトリ
+Learning-to-Drive-Anywhere-with-MBRA/
+lerobot/
+
+# --- Training Outputs & Logs ---
+wandb/
+checkpoints/
+outputs/
+logs/
+*.log
+
+# --- Datasets ---
+data/
+datasets/
